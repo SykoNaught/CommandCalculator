@@ -1,0 +1,510 @@
+[
+    {
+        "name": "Command Center",
+        "Levels": [
+            {
+                "1": [{
+                    "Titanium": 0,
+                    "Deutereum": 0,
+                    "Nickel": 0,
+                    "Plasma": 0,
+                    "Buildings": [{}]
+                }]
+            },
+            {
+                "2": [{
+                    "Titanium": 5800,
+                    "Deutereum": 5000,
+                    "Nickel": 0,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "1"
+                        }
+                    ]
+                }]
+            },
+            {
+                "3": [{
+                    "Titanium": 11000,
+                    "Deutereum": 9400,
+                    "Nickel": 0,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "2"
+                        },
+                        {
+                            "name": "Storage Center",
+                            "level": "1"
+                        }
+                    ]
+                }]
+            },
+            {
+                "4": [{
+                    "Titanium": 15000,
+                    "Deutereum": 12900,
+                    "Nickel": 0,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "3"
+                        },
+                        {
+                            "name": "Exploration Center",
+                            "level": "1"
+                        }
+                    ]
+                }]
+            },
+            {
+                "5": [{
+                    "Titanium": 23000,
+                    "Deutereum": 19800,
+                    "Nickel": 0,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "4"
+                        }
+                    ]
+                }]
+            },
+            {
+                "6": [{
+                    "Titanium": 34500,
+                    "Deutereum": 29700,
+                    "Nickel": 0,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "5"
+                        }
+                    ]
+                }]
+            },
+            {
+                "7": [{
+                    "Titanium": 57500,
+                    "Deutereum": 49500,
+                    "Nickel": 0,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "6"
+                        },
+                        {
+                            "name": "Military Dock",
+                            "level": "6"
+                        }
+                    ]
+                }]
+            },
+            {
+                "8": [{
+                    "Titanium": 92000,
+                    "Deutereum": 79300,
+                    "Nickel": 0,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "7"
+                        },
+                        {
+                            "name": "Storage Center",
+                            "level": "7"
+                        }
+                    ]
+                }]
+            },
+            {
+                "9": [{
+                    "Titanium": 172500,
+                    "Deutereum": 148700,
+                    "Nickel": 0,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "8"
+                        },
+                        {
+                            "name": "Military Headquarters",
+                            "level": "8"
+                        }
+                    ]
+                }]
+            },
+            {
+                "10": [{
+                    "Titanium": 287500,
+                    "Deutereum": 247800,
+                    "Nickel": 0,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "9"
+                        },
+                        {
+                            "name": "Flagship Dock",
+                            "level": "9"
+                        }
+                    ]
+                }]
+            },
+            {
+                "11": [{
+                    "Titanium": 525400,
+                    "Deutereum": 456300,
+                    "Nickel": 0,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "10"
+                        },
+                        {
+                            "name": "Research Center",
+                            "level": "10"
+                        }
+                    ]
+                }]
+            },
+            {
+                "12": [{
+                    "Titanium": 669400,
+                    "Deutereum": 581400,
+                    "Nickel": 0,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "11"
+                        },
+                        {
+                            "name": "Repair Center",
+                            "level": "11"
+                        }
+                    ]
+                }]
+            },
+            {
+                "13": [{
+                    "Titanium": 1200000,
+                    "Deutereum": 1000000,
+                    "Nickel": 0,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "12"
+                        }
+                    ]
+                }]
+            },
+            {
+                "14": [{
+                    "Titanium": 1600000,
+                    "Deutereum": 1400000,
+                    "Nickel": 0,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "13"
+                        },
+                        {
+                            "name": "Embassy",
+                            "level": "13"
+                        }
+                    ]
+                }]
+            },
+            {
+                "15": [{
+                    "Titanium": 2600000,
+                    "Deutereum": 2300000,
+                    "Nickel": 0,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "14"
+                        },
+                        {
+                            "name": "Military Headquarters",
+                            "level": "14"
+                        }
+                    ]
+                }]
+            },
+            {
+                "16": [{
+                    "Titanium": 3400000,
+                    "Deutereum": 3000000,
+                    "Nickel": 645800,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "15"
+                        },
+                        {
+                            "name": "Exploration Center",
+                            "level": "15"
+                        }
+                    ]
+                }]
+            },
+            {
+                "17": [{
+                    "Titanium": 5500000,
+                    "Deutereum": 4800000,
+                    "Nickel": 1000000,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "16"
+                        }
+                    ]
+                }]
+            },
+            {
+                "18": [{
+                    "Titanium": 7200000,
+                    "Deutereum": 6300000,
+                    "Nickel": 1300000,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "17"
+                        }
+                    ]
+                }]
+            },
+            {
+                "19": [{
+                    "Titanium": 9300000,
+                    "Deutereum": 8100000,
+                    "Nickel": 1700000,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "18"
+                        },
+                        {
+                            "name": "Outfitting Factory",
+                            "level": "18"
+                        }
+                    ]
+                }]
+            },
+            {
+                "20": [{
+                    "Titanium": 11800000,
+                    "Deutereum": 10300000,
+                    "Nickel": 2200000,
+                    "Plasma": 0,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "19"
+                        }
+                    ]
+                }]
+            },
+            {
+                "21": [{
+                    "Titanium": 14800000,
+                    "Deutereum": 12900000,
+                    "Nickel": 2700000,
+                    "Plasma": 1100000,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "20"
+                        },
+                        {
+                            "name": "Flagship Dock",
+                            "level": "20"
+                        }
+                    ]
+                }]
+            },
+            {
+                "22": [{
+                    "Titanium": 21400000,
+                    "Deutereum": 18600000,
+                    "Nickel": 4000000,
+                    "Plasma": 1600000,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "21"
+                        },
+                        {
+                            "name": "Military Headquarters",
+                            "level": "21"
+                        }
+                    ]
+                }]
+            },
+            {
+                "23": [{
+                    "Titanium": 26100000,
+                    "Deutereum": 22700000,
+                    "Nickel": 4800000,
+                    "Plasma": 1900000,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "22"
+                        },
+                        {
+                            "name": "Military Dock",
+                            "level": "22"
+                        }
+                    ]
+                }]
+            },
+            {
+                "24": [{
+                    "Titanium": 33600000,
+                    "Deutereum": 29200000,
+                    "Nickel": 6200000,
+                    "Plasma": 2500000,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "23"
+                        },
+                        {
+                            "name": "Embassy",
+                            "level": "23"
+                        }
+                    ]
+                }]
+            },
+            {
+                "25": [{
+                    "Titanium": 41500000,
+                    "Deutereum": 36100000,
+                    "Nickel": 8500000,
+                    "Plasma": 3600000,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "24"
+                        },
+                        {
+                            "name": "Storage Center",
+                            "level": "24"
+                        }
+                    ]
+                }]
+            },
+            {
+                "26": [{
+                    "Titanium": 55900000,
+                    "Deutereum": 48500000,
+                    "Nickel": 12500000,
+                    "Plasma": 5600000,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "25"
+                        },
+                        {
+                            "name": "Exploration Center",
+                            "level": "25"
+                        }
+                    ]
+                }]
+            },
+            {
+                "27": [{
+                    "Titanium": 71500000,
+                    "Deutereum": 62100000,
+                    "Nickel": 17300000,
+                    "Plasma": 8000000,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "26"
+                        },
+                        {
+                            "name": "Repair Center",
+                            "level": "26"
+                        }
+                    ]
+                }]
+            },
+            {
+                "28": [{
+                    "Titanium": 91800000,
+                    "Deutereum": 79700000,
+                    "Nickel": 23700000,
+                    "Plasma": 11300000,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "27"
+                        },
+                        {
+                            "name": "Research Center",
+                            "level": "27"
+                        }
+                    ]
+                }]
+            },
+            {
+                "29": [{
+                    "Titanium": 118500000,
+                    "Deutereum": 102900000,
+                    "Nickel": 32600000,
+                    "Plasma": 16000000,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "28"
+                        },
+                        {
+                            "name": "Military Headquarters",
+                            "level": "28"
+                        }
+                    ]
+                }]
+            },
+            {
+                "30": [{
+                    "Titanium": 155100000,
+                    "Deutereum": 134700000,
+                    "Nickel": 43500000,
+                    "Plasma": 22700000,
+                    "Buildings": [
+                        {
+                            "name": "Defense Center",
+                            "level": "29"
+                        },
+                        {
+                            "name": "Military Dock",
+                            "level": "29"
+                        }
+                    ]
+                }]
+            }
+        ]
+    }
+]
