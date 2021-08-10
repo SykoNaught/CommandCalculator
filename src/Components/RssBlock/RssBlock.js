@@ -50,7 +50,10 @@ const RssBlock = (props) => {
     return(
         <Col xs={6} md={6} lg={3} style={{marginBottom:"25px"}}>
             <Card>
-                <h2>{props.rss.name}</h2>
+                <Row>
+                    <h2 style={{marginBottom:"1rem",paddingBottom:"1rem", borderBottom:"1px solid #dedede"}}>{props.rss.name}</h2>
+                </Row>
+                
                 <Form>
                     {props.rss.amounts.map((amount) => {
                         
@@ -59,15 +62,18 @@ const RssBlock = (props) => {
                             <RssInput key={rowId} id={rowId} amount={amount} updateTotal={changeHandler} /> 
                         )
                     })}
+                
+                    <Row style={{marginTop:"1rem", paddingTop:"1rem", borderTop:"1px solid #dedede"}}>
+                        <Col style={{maxWidth: "100px"}}>
+                            <label style={{fontWeight:"bold"}} htmlFor={props.char + '-total'}>Total: </label>
+                        </Col>
+                        <Col>
+                            <div style={{textAlign:"right", fontWeight:"bold"}}>
+                                {totalRss}
+                            </div>
+                        </Col>
+                    </Row>
                 </Form>
-                <Row>
-                    <Col>
-                        <label htmlFor={props.char + '-total'}>Total: </label>
-                    </Col>
-                    <Col>
-                        {totalRss}
-                    </Col>
-                </Row>
             </Card>
         </Col>
     )

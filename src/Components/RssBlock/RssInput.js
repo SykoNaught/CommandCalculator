@@ -4,7 +4,7 @@ import { Row, Col, FormControl } from 'react-bootstrap';
 const RssInput = (props) => {
     return(
         <Row key={props.id} className="mb10">
-            <Col>
+            <Col style={{maxWidth: "100px"}}>
                 <label htmlFor={props.id}>{props.amount}:</label>
             </Col>
             <Col>
@@ -15,6 +15,7 @@ const RssInput = (props) => {
                     size="sm"
                     min="0"
                     step="1"
+                    style={{textAlign: "right"}}
                     onChange={props.updateTotal}
                 />
             </Col>
