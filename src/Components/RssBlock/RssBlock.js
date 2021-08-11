@@ -2,6 +2,9 @@ import {React, useState} from 'react';
 import Card from '../UI/Card';
 import { Row, Col, Form } from 'react-bootstrap';
 import RssInput from './RssInput';
+import classes from './RssBlock.module.css';
+import Popover from '../UI/MyPopover'
+import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 
 const RssBlock = (props) => {
     const [rssValues, setRssValues] = useState()
@@ -47,11 +50,21 @@ const RssBlock = (props) => {
         setTotalRss(formattedTotal)
         props.setTotal(props.rss.name,formattedTotal)
     } 
+    const imgPath = '/images/' + props.rss.name + '-Boxes.png'
     return(
-        <Col xs={6} md={6} lg={3} style={{marginBottom:"25px"}}>
+        <Col sm={6} md={6} lg={3} style={{marginBottom:"25px"}}>
             <Card>
-                <Row>
-                    <h2 style={{marginBottom:"1rem",paddingBottom:"1rem", borderBottom:"1px solid #dedede"}}>{props.rss.name}</h2>
+                <Row className={`${classes.rowHeader}`}>
+                    <div style={{display:"flex",justifyContent:"space-between"}}>
+                        <h2>{props.rss.name}</h2>
+                        <div style={{position:"relative"}}>
+                            <Popover header="What is this?" id={props.rss.name} icon={faQuestionCircle} placement="top">
+                                <p>Enter the amount of each {props.rss.name} boxes in your depot.</p>
+                                <img style={{maxWidth: "100%"}} src={imgPath} />
+                            </Popover>
+                        </div>
+                    </div>
+                    
                 </Row>
                 
                 <Form>
@@ -63,12 +76,12 @@ const RssBlock = (props) => {
                         )
                     })}
                 
-                    <Row style={{marginTop:"1rem", paddingTop:"1rem", borderTop:"1px solid #dedede"}}>
+                    <Row className={`${classes.rowFooter}`}>
                         <Col style={{maxWidth: "100px"}}>
-                            <label style={{fontWeight:"bold"}} htmlFor={props.char + '-total'}>Total: </label>
+                            <label className="text-bold" htmlFor={props.char + '-total'}>Total: </label>
                         </Col>
                         <Col>
-                            <div style={{textAlign:"right", fontWeight:"bold"}}>
+                            <div className="text-right text-bold">
                                 {totalRss}
                             </div>
                         </Col>

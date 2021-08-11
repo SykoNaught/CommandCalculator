@@ -5,9 +5,13 @@ import boxData from './Data/Boxes.json';
 import reqData from './Data/BuildingRequirements.json';
 import RssBlock from './Components/RssBlock/RssBlock';
 import CommandSelect from './Components/CommandBlock/CommandSelect';
-import CommandTable from './Components/CommandBlock/CommandTable'
+import CommandTable from './Components/CommandBlock/CommandTable';
+import Modal from './Components/UI/MyModal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
+  const [modalShow, setModalShow] = useState(false);
   const [totalRssByType, setTotalRssByType] = useState({
     "Titanium": 0,
     "Deuterium": 0,
@@ -66,23 +70,30 @@ function App() {
   const formatRemoveCommas = s => {
     return parseInt(s.toString().replace(/[^0-9]/g, ''))
   }
+  const launchModal = e => {
+    e.preventDefault()
+    setModalShow(true)
+  }
   return (
     <Container className="App">
       <Row>
-        <h1 style={{textAlign: "center", marginBottom: "2rem"}}>Command Calculator</h1>
+        <h1 className="text-center mb2rem">Command Calculator</h1>
         <Col>
-          <Row style={{marginBottom:'1.5rem'}}>
+          <Row className="mb1hrem">
             <Col lg={{span:6, offset:3}}>
               <Card>
-                <CommandSelect 
-                  requirementsData={reqData} 
-                  selectedCommand={selectedCommand} 
+                <p className="text-center text-italic">Select a command center level to see if you have enough resources to upgrade</p>
+                
+                <CommandSelect
+                  requirementsData={reqData}
+                  selectedCommand={selectedCommand}
                   handleChange={handleCommandSelect} />
                 <CommandTable
-                  addCommas={formatAddCommas} 
-                  removeCommas={formatRemoveCommas} 
-                  calculatedRequirements={calculatedRequirements} 
+                  addCommas={formatAddCommas}
+                  removeCommas={formatRemoveCommas}
+                  calculatedRequirements={calculatedRequirements}
                   selectedCommand={selectedCommand} />
+                  <p className="text-bold text-right" style={{marginBottom:"0", marginTop:"25px"}}><a href="#" onClick={launchModal}><FontAwesomeIcon icon={faInfoCircle} /> How To Use</a></p>
               </Card>
             </Col>
           </Row>
@@ -98,7 +109,18 @@ function App() {
           </Row>
         </Col>
       </Row>
-      
+      <Row className="mt30">
+        <p className="text-center text-italic" style={{fontSize:"12px"}}>&copy; SykoNaught 2021 | Designed and Developed by SykoNaught | SYK R5 - Nebula 28</p>
+      </Row>
+      <Modal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        size="lg"
+        header="How To Use">
+        <div className="youtube-wrapper">
+          <iframe className="youtube-video" src="https://www.youtube.com/embed/PLu09lcPAJg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </div>
+      </Modal>
     </Container> 
   );
 }
