@@ -23,7 +23,8 @@ function App() {
     "Titanium": 0,
     "Deuterium": 0,
     "Nickel": 0,
-    "Plasma": 0
+    "Plasma": 0,
+    "Buildings": []
   })
   const [calculatedRequirements, setCalculatedRequirements] = useState([
     {"Titanium": 0},
@@ -40,7 +41,10 @@ function App() {
       "Titanium": formatAddCommas(lvlData.Titanium),
       "Deuterium": formatAddCommas(lvlData.Deuterium),
       "Nickel": formatAddCommas(lvlData.Nickel),
-      "Plasma": formatAddCommas(lvlData.Plasma)
+      "Plasma": formatAddCommas(lvlData.Plasma),
+      "Buildings":[
+        lvlData.Buildings
+      ]
     }
     setSelectedCommand(newValues)
     calcRequirements(newValues, totalRssByType)
@@ -75,53 +79,55 @@ function App() {
     setModalShow(true)
   }
   return (
-    <Container className="App">
-      <Row>
-        <h1 className="text-center mb2rem">Command Calculator</h1>
-        <Col>
-          <Row className="mb1hrem">
-            <Col lg={{span:6, offset:3}}>
-              <Card>
-                <p className="text-center text-italic">Select a command center level to see if you have enough resources to upgrade</p>
-                
-                <CommandSelect
-                  requirementsData={reqData}
-                  selectedCommand={selectedCommand}
-                  handleChange={handleCommandSelect} />
-                <CommandTable
-                  addCommas={formatAddCommas}
-                  removeCommas={formatRemoveCommas}
-                  calculatedRequirements={calculatedRequirements}
-                  selectedCommand={selectedCommand} />
-                  <p className="text-bold text-right" style={{marginBottom:"0", marginTop:"25px"}}><a href="#" onClick={launchModal}><FontAwesomeIcon icon={faInfoCircle} /> How To Use</a></p>
-              </Card>
-            </Col>
-          </Row>
-          <Row>
-            {
-              boxData.map( (box) => {
-                const char = box.name.charAt(0).toLowerCase();
-                return(
-                  <RssBlock key={box.name} rss={box} char={char} setTotal={setRssTypeTotal} />
-                )
-              })
-            }
-          </Row>
-        </Col>
-      </Row>
-      <Row className="mt30">
-        <p className="text-center text-italic" style={{fontSize:"12px"}}>&copy; SykoNaught 2021 | Designed and Developed by SykoNaught | SYK R5 - Nebula 28</p>
-      </Row>
-      <Modal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-        size="lg"
-        header="How To Use">
-        <div className="youtube-wrapper">
-          <iframe className="youtube-video" src="https://www.youtube.com/embed/PLu09lcPAJg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-        </div>
-      </Modal>
-    </Container> 
+    <div className="App">
+      <Container>
+        <Row>
+          <h1 className="text-center mb2rem">Command Calculator</h1>
+          <Col>
+            <Row className="mb1hrem">
+              <Col lg={{span:6, offset:3}}>
+                <Card>
+                  <p className="text-center text-italic">Select a command center level to see if you have enough resources to upgrade</p>
+                  
+                  <CommandSelect
+                    requirementsData={reqData}
+                    selectedCommand={selectedCommand}
+                    handleChange={handleCommandSelect} />
+                  <CommandTable
+                    addCommas={formatAddCommas}
+                    removeCommas={formatRemoveCommas}
+                    calculatedRequirements={calculatedRequirements}
+                    selectedCommand={selectedCommand} />
+                    <p className="text-bold text-right" style={{marginBottom:"0", marginTop:"25px"}}><a href="#" onClick={launchModal}><FontAwesomeIcon icon={faInfoCircle} /> How To Use</a></p>
+                </Card>
+              </Col>
+            </Row>
+            <Row>
+              {
+                boxData.map( (box) => {
+                  const char = box.name.charAt(0).toLowerCase();
+                  return(
+                    <RssBlock key={box.name} rss={box} char={char} setTotal={setRssTypeTotal} />
+                  )
+                })
+              }
+            </Row>
+          </Col>
+        </Row>
+        <Row className="mt30">
+          <p className="text-center text-italic" style={{fontSize:"12px"}}>&copy; SykoNaught 2021 | Designed and Developed by SykoNaught | SYK R5 - Nebula 28</p>
+        </Row>
+        <Modal
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+          size="lg"
+          header="How To Use">
+          <div className="youtube-wrapper">
+            <iframe className="youtube-video" src="https://www.youtube.com/embed/PLu09lcPAJg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+        </Modal>
+      </Container> 
+    </div>
   );
 }
 

@@ -1,4 +1,4 @@
-.tableHead{border-bottom: 2px solid #dedede;}
+.tableHead{border-bottom: 3px solid #cccccc;}
 .tableHead::after{
     content:'';
     height:15px;
@@ -7,7 +7,8 @@
 }
 .tableHead th{font-weight:600}
 
-.tableBody td{font-size:14px; padding:10px 0px}
-.tableBody tr{border-bottom:1px solid #dedede}
-.tableBody tr:last-child{border-bottom:0px}
-.tableBody tr:last-child td{padding-bottom:0px}
+.tableBody td, tfoot td{font-size:14px; padding:10px 0px}
+.tableBody tr, tfoot tr{border-bottom:1px solid #dedede}
+.tableBody tr:last-child{border-bottom:3px solid #cccccc}
+tfoot tr:last-child{border-bottom:0px}
+tfoot tr:last-child td{padding-bottom:0px}

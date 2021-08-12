@@ -1,5 +1,7 @@
 import React from 'react';
 import classes from './CommandTable.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlusSquare } from '@fortawesome/free-solid-svg-icons'
 
 const CommandTable = (props) => {
     return(
@@ -33,8 +35,28 @@ const CommandTable = (props) => {
                     )
                     
                 })
-                }
+                }    
             </tbody>
+            <tfoot>
+                {props.selectedCommand['Buildings'].length > 0 && 
+                    
+                    props.selectedCommand['Buildings'][0].map((building, i) => {
+                        return(
+                            <tr key={building.name + 'i'}>
+                                <td>
+                                    {building['name']}
+                                </td>
+                                <td className="text-right">
+                                    Level {building['level']}
+                                </td>
+                                <td className="text-right">
+                                    <FontAwesomeIcon icon={faPlusSquare} style={{color:"#6c757d"}} /> Add Building
+                                </td>
+                            </tr>
+                        )
+                    })
+                }
+            </tfoot>
         </table>
     )
 }
