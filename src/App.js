@@ -47,6 +47,7 @@ function App() {
       ]
     }
     setSelectedCommand(newValues)
+    console.log(newValues)
     calcRequirements(newValues, totalRssByType)
   }
 
@@ -82,10 +83,11 @@ function App() {
     <div className="App">
       <Container>
         <Row>
-          <h1 className="text-center mb2rem">Command Calculator</h1>
+          <h1 className="text-center mb2rem">Infinite Galaxy Command Calculator</h1>
           <Col>
-            <Row className="mb1hrem">
-              <Col lg={{span:6, offset:3}}>
+            <Row className="mb1hrem d-flex justify-content-center">
+              
+              <Col lg={6} xl={4} >
                 <Card>
                   <p className="text-center text-italic">Select a command center level to see if you have enough resources to upgrade</p>
                   
