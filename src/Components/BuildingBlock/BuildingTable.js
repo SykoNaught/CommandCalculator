@@ -1,13 +1,11 @@
 import React from 'react';
-import classes from './CommandTable.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlusSquare } from '@fortawesome/free-solid-svg-icons'
+import classes from './BuildingTable.module.css';
 
 const CommandTable = (props) => {
     return(
         <div style={{position:'relative'}}>
-            <div  className="text-center text-600">
-                Command Center
+            <div  className={`${classes.buildingName}`}>
+                <h2>{props.selectedBuilding.Name} - Level {props.selectedBuilding.Level}</h2>
             </div>
             <table style={{width:"100%"}}>
                 <thead className={`${classes.tableHead}`}>
@@ -24,7 +22,7 @@ const CommandTable = (props) => {
                         return(
                         <tr key={i}>
                             <td><div style={{width:"80px"}}>{key}</div></td>
-                            <td className="text-right">{props.selectedCommand[key]}</td>
+                            <td className="text-right">{props.selectedBuilding[key]}</td>
                             {parseInt(val) > 0 ? 
                             
                                 <td className="text-right text-600"><div style={{color:"Green", maxWidth:"200px", marginLeft:"auto"}} >Extra: {val}</div></td>
@@ -34,33 +32,12 @@ const CommandTable = (props) => {
                                 :
                                     <td className="text-right text-600"><div style={{color:"#a70000", maxWidth:"200px", marginLeft:"auto"}}>Need: {props.addCommas(parseInt(props.removeCommas(val)) * 1)}</div></td>
                             }
-                            
                         </tr>
                         )
                         
                     })
                     }    
                 </tbody>
-                <tfoot>
-                    {props.selectedCommand['Buildings'].length > 0 && 
-                        
-                        props.selectedCommand['Buildings'][0].map((building, i) => {
-                            return(
-                                <tr key={building.name + 'i'}>
-                                    <td>
-                                        {building['name']}
-                                    </td>
-                                    <td className="text-right">
-                                        Level {building['level']}
-                                    </td>
-                                    <td className="text-right">
-                                        <FontAwesomeIcon icon={faPlusSquare} style={{color:"#6c757d"}} /> Add Building
-                                    </td>
-                                </tr>
-                            )
-                        })
-                    }
-                </tfoot>
             </table>
         </div>
     )

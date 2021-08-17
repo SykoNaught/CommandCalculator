@@ -52,11 +52,11 @@ const RssBlock = (props) => {
     } 
     const imgPath = '/images/' + props.rss.name + '-Boxes.png'
     return(
-        <Col sm={6} md={6} lg={3} style={{marginBottom:"25px"}}>
+        <Col sm={6} md={6} lg={3}>
             <Card>
                 <Row className={`${classes.rowHeader}`}>
                     <div style={{display:"flex",justifyContent:"space-between"}}>
-                        <h2>{props.rss.name}</h2>
+                        <h3>{props.rss.name}</h3>
                         <div style={{position:"relative"}}>
                             <Popover header="What is this?" id={props.rss.name} icon={faQuestionCircle} placement="top">
                                 <p>Enter the amount of each {props.rss.name} boxes in your depot.</p>

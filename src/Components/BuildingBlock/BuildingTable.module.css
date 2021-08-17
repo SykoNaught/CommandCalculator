@@ -1,3 +1,12 @@
+
+.buildingName{
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #ccc;
+    text-align:center;
+    font-weight:600;
+}
 .tableHead{border-bottom: 3px solid #cccccc;}
 .tableHead::after{
     content:'';
@@ -9,6 +18,4 @@
 
 .tableBody td, tfoot td{font-size:14px; padding:10px 0px}
 .tableBody tr, tfoot tr{border-bottom:1px solid #dedede}
-.tableBody tr:last-child{border-bottom:3px solid #cccccc}
-tfoot tr:last-child{border-bottom:0px}
-tfoot tr:last-child td{padding-bottom:0px}
+.tableBody tr:last-child{border-bottom:0px}
