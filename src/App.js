@@ -111,7 +111,7 @@ function App() {
               <Col lg={6} className='d-flex'>
                 <Card>
                   <div className="d-flex flex-column h-100">
-                    
+                  <p className="text-center text-italic">Select a building and level to see if you have enough resources to upgrade</p>
                     <Row>
                       <Col sm={6} md={6} lg={12} xl={6}>
                         <DropdownSelect
@@ -127,9 +127,7 @@ function App() {
                           handleChange={handleLevelSelect} />
                       </Col>
                     </Row>
-                    <p className="text-center text-italic text-600">Select a building and level to see if you have enough resources to upgrade</p>
-                    <p>I really want to fill this section with something so that it is not completely blank and open space. However, I am not quite sure what to put here yet.</p>
-                    <p>I really want to fill this section with something so that it is not completely blank and open space. However, I am not quite sure what to put here yet.</p>
+                    <p className="text-center text-italic text-600" style={{fontSize:'1.25rem', marginTop:'auto'}}>New Features Coming Soon!</p>
                     <div className="text-bold text-right mtauto"><a href="#" onClick={launchModal}><FontAwesomeIcon icon={faInfoCircle} /> How To Use</a></div>
                   </div>
                 </Card>
