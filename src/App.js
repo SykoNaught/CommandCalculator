@@ -105,7 +105,7 @@ function App() {
     <div className="App">
       <Container>
         <Row>
-          <h1 className="text-center mb2rem">Infinite Galaxy Calculator</h1>
+          <h1 className="text-center mb2rem">Infinite Galaxy Resource Calculator</h1>
           <Col>
             <Row className="d-flex justify-content-center">
               <Col lg={6} className='d-flex'>
