@@ -111,7 +111,7 @@ function App() {
               <Col lg={6} className='d-flex'>
                 <Card>
                   <div className="d-flex flex-column h-100">
-                  <p className="text-center text-italic">Select a building and level to see if you have enough resources to upgrade</p>
+                  <p className="text-center text-italic">Select a building and level below.</p>
                     <Row>
                       <Col sm={6} md={6} lg={12} xl={6}>
                         <DropdownSelect
@@ -127,7 +127,7 @@ function App() {
                           handleChange={handleLevelSelect} />
                       </Col>
                     </Row>
-                    <p className="text-center text-italic text-600" style={{fontSize:'1.25rem', marginTop:'auto'}}>New Features Coming Soon!</p>
+                    <p className="text-center" style={{marginTop:'auto'}}>This is an <strong className="text-600">Infinite Galaxy calculator</strong> tool that totals of all resources in your depot. Then, compares your total resources to the required resources for a selected building and level to see if you have enough to upgrade, or how many more resources you need to complete that building upgrade.</p>
                     <div className="text-bold text-right mtauto"><a href="#" onClick={launchModal}><FontAwesomeIcon icon={faInfoCircle} /> How To Use</a></div>
                   </div>
                 </Card>
@@ -163,7 +163,7 @@ function App() {
           size="lg"
           header="How To Use">
           <div className="youtube-wrapper">
-            <iframe className="youtube-video" src="https://www.youtube.com/embed/PLu09lcPAJg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <iframe className="youtube-video" src="https://www.youtube.com/embed/_AP7BjrVTic" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
         </Modal>
       </Container> 

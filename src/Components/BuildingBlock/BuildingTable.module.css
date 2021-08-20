@@ -19,3 +19,8 @@
 .tableBody td, tfoot td{font-size:14px; padding:10px 0px}
 .tableBody tr, tfoot tr{border-bottom:1px solid #dedede}
 .tableBody tr:last-child{border-bottom:0px}
+
+tfoot tr:first-child{border-top: 3px solid #ccc;border-bottom:3px solid #ccc;}
+tfoot tr:last-child{
+    border-bottom:0px;
+}

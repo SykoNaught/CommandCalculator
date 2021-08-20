@@ -38,6 +38,30 @@ const CommandTable = (props) => {
                     })
                     }    
                 </tbody>
+                {props.selectedBuilding.Name == 'Command Center' &&
+                    
+                    props.selectedBuilding.Level > 1 && 
+                        <tfoot>
+                            <tr>
+                                <td className="text-center text-600" style={{fontSize:"1rem"}} colSpan={3}>
+                                    Required Buildings
+                                </td>
+                            </tr>
+                            {props.selectedBuilding.Buildings[0].map((building, i) => {
+                                return(
+                                    <tr key={building.name + 'i'}>
+                                        <td>
+                                            {building['name']}
+                                        </td>
+                                        <td colSpan={2} className="text-right">
+                                            Level {building['level']}
+                                        </td>
+                                    </tr>
+                                )
+                                
+                            })}
+                        </tfoot>
+                }
             </table>
         </div>
     )

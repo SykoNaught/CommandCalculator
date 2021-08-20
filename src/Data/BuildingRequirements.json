@@ -1243,6 +1243,251 @@
         ]
     },
     {
+        "Name": "Storage Center",
+        "Levels": [
+            {
+                "1": [{
+                    "Titanium": 161,
+                    "Deuterium": 139,
+                    "Nickel": 0,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "2": [{
+                    "Titanium": 333,
+                    "Deuterium": 287,
+                    "Nickel": 0,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "3": [{
+                    "Titanium": 631,
+                    "Deuterium": 544,
+                    "Nickel": 0,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "4": [{
+                    "Titanium": 861,
+                    "Deuterium": 742,
+                    "Nickel": 0,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "5": [{
+                    "Titanium": 1300,
+                    "Deuterium": 1100,
+                    "Nickel": 0,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "6": [{
+                    "Titanium": 1900,
+                    "Deuterium": 1700,
+                    "Nickel": 0,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "7": [{
+                    "Titanium": 3200,
+                    "Deuterium": 2800,
+                    "Nickel": 0,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "8": [{
+                    "Titanium": 5200,
+                    "Deuterium": 4500,
+                    "Nickel": 0,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "9": [{
+                    "Titanium": 9800,
+                    "Deuterium": 8500,
+                    "Nickel": 0,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "10": [{
+                    "Titanium": 16400,
+                    "Deuterium": 14200,
+                    "Nickel": 0,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "11": [{
+                    "Titanium": 30100,
+                    "Deuterium": 26100,
+                    "Nickel": 0,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "12": [{
+                    "Titanium": 38400,
+                    "Deuterium": 33300,
+                    "Nickel": 0,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "13": [{
+                    "Titanium": 71100,
+                    "Deuterium": 61700,
+                    "Nickel": 0,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "14": [{
+                    "Titanium": 95700,
+                    "Deuterium": 83100,
+                    "Nickel": 0,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "15": [{
+                    "Titanium": 152800,
+                    "Deuterium": 132700,
+                    "Nickel": 0,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "16": [{
+                    "Titanium": 198600,
+                    "Deuterium": 172500,
+                    "Nickel": 15800,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "17": [{
+                    "Titanium": 319600,
+                    "Deuterium": 277600,
+                    "Nickel": 25500,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "18": [{
+                    "Titanium": 417900,
+                    "Deuterium": 363000,
+                    "Nickel": 33400,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "19": [{
+                    "Titanium": 535700,
+                    "Deuterium": 465300,
+                    "Nickel": 42800,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "20": [{
+                    "Titanium": 680800,
+                    "Deuterium": 591300,
+                    "Nickel": 54400,
+                    "Plasma": 0
+                }]
+            },
+            {
+                "21": [{
+                    "Titanium": 853000,
+                    "Deuterium": 740900,
+                    "Nickel": 68100,
+                    "Plasma": 42200
+                }]
+            },
+            {
+                "22": [{
+                    "Titanium": 1200000,
+                    "Deuterium": 1000000,
+                    "Nickel": 98400,
+                    "Plasma": 61000
+                }]
+            },
+            {
+                "23": [{
+                    "Titanium": 1500000,
+                    "Deuterium": 1300000,
+                    "Nickel": 120000,
+                    "Plasma": 74300
+                }]
+            },
+            {
+                "24": [{
+                    "Titanium": 1900000,
+                    "Deuterium": 1600000,
+                    "Nickel": 154100,
+                    "Plasma": 95500
+                }]
+            },
+            {
+                "25": [{
+                    "Titanium": 2300000,
+                    "Deuterium": 2000000,
+                    "Nickel": 210800,
+                    "Plasma": 137900
+                }]
+            },
+            {
+                "26": [{
+                    "Titanium": 3200000,
+                    "Deuterium": 2700000,
+                    "Nickel": 308400,
+                    "Plasma": 210600
+                }]
+            },
+            {
+                "27": [{
+                    "Titanium": 4100000,
+                    "Deuterium": 3500000,
+                    "Nickel": 425700,
+                    "Plasma": 301200
+                }]
+            },
+            {
+                "28": [{
+                    "Titanium": 5200000,
+                    "Deuterium": 4500000,
+                    "Nickel": 584200,
+                    "Plasma": 425900
+                }]
+            },
+            {
+                "29": [{
+                    "Titanium": 6800000,
+                    "Deuterium": 5900000,
+                    "Nickel": 802600,
+                    "Plasma": 600300
+                }]
+            },
+            {
+                "30": [{
+                    "Titanium": 8800000,
+                    "Deuterium": 7700000,
+                    "Nickel": 1000000,
+                    "Plasma": 851500
+                }]
+            }
+        ]
+    },
+    {
         "Name": "Research Center",
         "Levels": [
             {
@@ -1728,251 +1973,6 @@
                     "Deuterium": 11000000,
                     "Nickel": 1000000,
                     "Plasma": 851500
-                }]
-            }
-        ]
-    },
-    {
-        "Name": "Repair Center",
-        "Levels": [
-            {
-                "1": [{
-                    "Titanium": 436,
-                    "Deuterium": 198,
-                    "Nickel": 0,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "2": [{
-                    "Titanium": 903,
-                    "Deuterium": 410,
-                    "Nickel": 0,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "3": [{
-                    "Titanium": 1700,
-                    "Deuterium": 777,
-                    "Nickel": 0,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "4": [{
-                    "Titanium": 2300,
-                    "Deuterium": 1000,
-                    "Nickel": 0,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "5": [{
-                    "Titanium": 3500,
-                    "Deuterium": 1600,
-                    "Nickel": 0,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "6": [{
-                    "Titanium": 5300,
-                    "Deuterium": 2400,
-                    "Nickel": 0,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "7": [{
-                    "Titanium": 8900,
-                    "Deuterium": 4000,
-                    "Nickel": 0,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "8": [{
-                    "Titanium": 14300,
-                    "Deuterium": 6500,
-                    "Nickel": 0,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "9": [{
-                    "Titanium": 26800,
-                    "Deuterium": 12100,
-                    "Nickel": 0,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "10": [{
-                    "Titanium": 44700,
-                    "Deuterium": 20300,
-                    "Nickel": 0,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "11": [{
-                    "Titanium": 81800,
-                    "Deuterium": 37400,
-                    "Nickel": 0,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "12": [{
-                    "Titanium": 104200,
-                    "Deuterium": 47600,
-                    "Nickel": 0,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "13": [{
-                    "Titanium": 193000,
-                    "Deuterium": 88200,
-                    "Nickel": 0,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "14": [{
-                    "Titanium": 259900,
-                    "Deuterium": 118800,
-                    "Nickel": 0,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "15": [{
-                    "Titanium": 414800,
-                    "Deuterium": 189600,
-                    "Nickel": 0,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "16": [{
-                    "Titanium": 539300,
-                    "Deuterium": 246500,
-                    "Nickel": 52900,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "17": [{
-                    "Titanium": 867600,
-                    "Deuterium": 396600,
-                    "Nickel": 85100,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "18": [{
-                    "Titanium": 1100000,
-                    "Deuterium": 518600,
-                    "Nickel": 111300,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "19": [{
-                    "Titanium": 1400000,
-                    "Deuterium": 664700,
-                    "Nickel": 142700,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "20": [{
-                    "Titanium": 1800000,
-                    "Deuterium": 844800,
-                    "Nickel": 181400,
-                    "Plasma": 0
-                }]
-            },
-            {
-                "21": [{
-                    "Titanium": 2300000,
-                    "Deuterium": 1000000,
-                    "Nickel": 227200,
-                    "Plasma": 154900
-                }]
-            },
-            {
-                "22": [{
-                    "Titanium": 3300000,
-                    "Deuterium": 1500000,
-                    "Nickel": 328100,
-                    "Plasma": 223700
-                }]
-            },
-            {
-                "23": [{
-                    "Titanium": 4000000,
-                    "Deuterium": 1800000,
-                    "Nickel": 400100,
-                    "Plasma": 272700
-                }]
-            },
-            {
-                "24": [{
-                    "Titanium": 5200000,
-                    "Deuterium": 2300000,
-                    "Nickel": 513900,
-                    "Plasma": 350300
-                }]
-            },
-            {
-                "25": [{
-                    "Titanium": 6400000,
-                    "Deuterium": 3900000,
-                    "Nickel": 702900,
-                    "Plasma": 505600
-                }]
-            },
-            {
-                "26": [{
-                    "Titanium": 8700000,
-                    "Deuterium": 3900000,
-                    "Nickel": 1000000,
-                    "Plasma": 772200
-                }]
-            },
-            {
-                "27": [{
-                    "Titanium": 11100000,
-                    "Deuterium": 5000000,
-                    "Nickel": 1400000,
-                    "Plasma": 1100000
-                }]
-            },
-            {
-                "28": [{
-                    "Titanium": 14200000,
-                    "Deuterium": 6500000,
-                    "Nickel": 1900000,
-                    "Plasma": 1500000
-                }]
-            },
-            {
-                "29": [{
-                    "Titanium": 18400000,
-                    "Deuterium": 8400000,
-                    "Nickel": 2600000,
-                    "Plasma": 2200000
-                }]
-            },
-            {
-                "30": [{
-                    "Titanium": 24100000,
-                    "Deuterium": 11000000,
-                    "Nickel": 3500000,
-                    "Plasma": 3100000
                 }]
             }
         ]
