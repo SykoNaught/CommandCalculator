@@ -127,7 +127,7 @@ function App() {
                           handleChange={handleLevelSelect} />
                       </Col>
                     </Row>
-                    <p className="text-center" style={{marginTop:'auto'}}>This is an <strong className="text-600">Infinite Galaxy calculator</strong> tool that totals of all resources in your depot. Then, compares your total resources to the required resources for a selected building and level to see if you have enough to upgrade, or how many more resources you need to complete that building upgrade.</p>
+                    <p className="text-center" style={{marginTop:'auto'}}>This is an <strong className="text-600">Infinite Galaxy calculator</strong> tool that totals all of the resources in your depot. Then, compares your total resources to the required resources for a selected building and level. You can then see how many more resources you need to complete a building upgrade, or how many extra resources you will have after.</p>
                     <div className="text-bold text-right mtauto"><a href="#" onClick={launchModal}><FontAwesomeIcon icon={faInfoCircle} /> How To Use</a></div>
                   </div>
                 </Card>
@@ -154,8 +154,29 @@ function App() {
             </Row>
           </Col>
         </Row>
+        <Row>
+          <Col lg={12}>
+            <Card>
+              <h2 id="donation" style={{textAlign:'center', fontSize:'24px', color:'#00a500'}}>Help keep this site up and running!</h2>
+              <p style={{marginBottom:'25px'}}></p>
+              <center>
+                <form action="https://www.paypal.com/donate" method="post" target="_blank">
+                  <input type="hidden" name="business" value="8PABYURJXY3VA" />
+                  <input type="hidden" name="no_recurring" value="0" />
+                  <input type="hidden" name="item_name" value="Thank You! You are helping to keep this site up and running!" />
+                  <input type="hidden" name="currency_code" value="USD" />
+                  <input type="image" src="https://pics.paypal.com/00/s/YzA5MjliNzAtNmE3MS00YzgzLWFjYzQtOTZjNzdhZTc1YTEx/file.PNG" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                  <img alt="PayPal Donate" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                </form>
+              </center>
+              <p></p>
+              <p>The Infinite Galaxy Resource calculator is a <strong className="text-600">free tool</strong> created and managed by just one person. It can be a bit of work to manage and keep up to date. The cost of keeping this Free Infinite Galaxy Tool online can also get pretty expensive for me on an annual basis. You are not obligated to donate, but any little bit helps!</p>
+              <p>If just a few of the users donate, I can keep this tool online and continue adding functionality. I really hope to expand this tool and include many more features. Such as <strong className="text-600">the ability to save your data, add multiple farms, language translations, and much more.</strong> So if you are feeling generous, and want to help a poor developer who loves to play Infinite Galaxy, please feel free to donate below! Any amount helps! Just think of it like buying a pack from the shop in-game ;)</p>
+            </Card>
+          </Col>
+        </Row>
         <Row className="mt30">
-          <p className="text-center text-italic" style={{fontSize:"12px"}}>&copy; SykoNaught 2021 | Designed and Developed by SykoNaught | SYK R5 - Nebula 28</p>
+          <p className="text-center text-italic" style={{fontSize:"12px"}}>&copy; SykoNaught 2022 | Designed and Developed by SykoNaught | SYK - Nebula 28</p>
         </Row>
         <Modal
           show={modalShow}

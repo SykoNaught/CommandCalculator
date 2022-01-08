@@ -60,7 +60,11 @@ const RssBlock = (props) => {
                         <div style={{position:"relative"}}>
                             <Popover header="What is this?" id={props.rss.name} icon={faQuestionCircle} placement="top">
                                 <p>Enter the amount of each {props.rss.name} boxes in your depot.</p>
-                                <img style={{maxWidth: "100%"}} src={imgPath} />
+                                <img 
+                                    style={{maxWidth: "100%"}}
+                                    src={imgPath}
+                                    alt={props.rss.name + ' Depot Boxes | Infinite Galaxy Resource Calculator'}
+                                    title={props.rss.name + ' Depot Boxes | Infinite Galaxy Resource Calculator'} />
                             </Popover>
                         </div>
                     </div>

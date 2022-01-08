@@ -617,7 +617,7 @@
             {
                 "14": [{
                     "Titanium": 0,
-                    "Deuterium": 1000000,
+                    "Deuterium": 1090000,
                     "Nickel": 0,
                     "Plasma": 0
                 }]
@@ -625,7 +625,7 @@
             {
                 "15": [{
                     "Titanium": 0,
-                    "Deuterium": 1700000,
+                    "Deuterium": 1740000,
                     "Nickel": 0,
                     "Plasma": 0
                 }]
@@ -633,7 +633,7 @@
             {
                 "16": [{
                     "Titanium": 0,
-                    "Deuterium": 2200000,
+                    "Deuterium": 2270000,
                     "Nickel": 285800,
                     "Plasma": 0
                 }]
@@ -641,7 +641,7 @@
             {
                 "17": [{
                     "Titanium": 0,
-                    "Deuterium": 3600000,
+                    "Deuterium": 3650000,
                     "Nickel": 459900,
                     "Plasma": 0
                 }]
@@ -649,7 +649,7 @@
             {
                 "18": [{
                     "Titanium": 0,
-                    "Deuterium": 4700000,
+                    "Deuterium": 4770000,
                     "Nickel": 601300,
                     "Plasma": 0
                 }]
@@ -657,15 +657,15 @@
             {
                 "19": [{
                     "Titanium": 0,
-                    "Deuterium": 612000,
-                    "Nickel": 770700,
+                    "Deuterium": 6120000,
+                    "Nickel": 771000,
                     "Plasma": 0
                 }]
             },
             {
                 "20": [{
                     "Titanium": 0,
-                    "Deuterium": 772000,
+                    "Deuterium": 7770000,
                     "Nickel": 979600,
                     "Plasma": 0
                 }]
@@ -673,8 +673,8 @@
             {
                 "21": [{
                     "Titanium": 0,
-                    "Deuterium": 972000,
-                    "Nickel": 122000,
+                    "Deuterium": 9740000,
+                    "Nickel": 1220000,
                     "Plasma": 633800
                 }]
             },
@@ -682,7 +682,7 @@
                 "22": [{
                     "Titanium": 0,
                     "Deuterium": 14000000,
-                    "Nickel": 172000,
+                    "Nickel": 1720000,
                     "Plasma": 915100
                 }]
             },
@@ -690,23 +690,23 @@
                 "23": [{
                     "Titanium": 0,
                     "Deuterium": 17100000,
-                    "Nickel": 212000,
-                    "Plasma": 112000
+                    "Nickel": 2120000,
+                    "Plasma": 1120000
                 }]
             },
             {
                 "24": [{
                     "Titanium": 0,
                     "Deuterium": 22000000,
-                    "Nickel": 272000,
-                    "Plasma": 142000
+                    "Nickel": 2720000,
+                    "Plasma": 1420000
                 }]
             },
             {
                 "25": [{
                     "Titanium": 0,
                     "Deuterium": 27200000,
-                    "Nickel": 372000,
+                    "Nickel": 3720000,
                     "Plasma": 2000000
                 }]
             },
@@ -714,24 +714,24 @@
                 "26": [{
                     "Titanium": 0,
                     "Deuterium": 36600000,
-                    "Nickel": 552000,
-                    "Plasma": 312000
+                    "Nickel": 5520000,
+                    "Plasma": 3120000
                 }]
             },
             {
                 "27": [{
                     "Titanium": 0,
                     "Deuterium": 46800000,
-                    "Nickel": 762000,
-                    "Plasma": 452000
+                    "Nickel": 7620000,
+                    "Plasma": 4520000
                 }]
             },
             {
                 "28": [{
                     "Titanium": 0,
                     "Deuterium": 60100000,
-                    "Nickel": 1052000,
-                    "Plasma": 632000
+                    "Nickel": 10520000,
+                    "Plasma": 6320000
                 }]
             },
             {
@@ -747,7 +747,7 @@
                     "Titanium": 0,
                     "Deuterium": 101500000,
                     "Nickel": 19200000,
-                    "Plasma": 1272000
+                    "Plasma": 12720000
                 }]
             }
         ]

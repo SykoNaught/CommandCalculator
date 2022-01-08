@@ -38,7 +38,7 @@ const CommandTable = (props) => {
                     })
                     }    
                 </tbody>
-                {props.selectedBuilding.Name == 'Command Center' &&
+                {props.selectedBuilding.Name === 'Command Center' &&
                     
                     props.selectedBuilding.Level > 1 && 
                         <tfoot>
