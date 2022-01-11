@@ -104,6 +104,9 @@ function App() {
   return (
     <div className="App">
       <Container>
+        <div className="g-translator">
+          <strong style={{fontWeight:"600"}}></strong><div id="google_translate_element"></div>
+        </div>
         <Row>
           <h1 className="text-center mb2rem">Infinite Galaxy Resource Calculator</h1>
           <Col>
@@ -128,6 +131,7 @@ function App() {
                       </Col>
                     </Row>
                     <p className="text-center" style={{marginTop:'auto'}}>This is an <strong className="text-600">Infinite Galaxy calculator</strong> tool that totals all of the resources in your depot. Then, compares your total resources to the required resources for a selected building and level. You can then see how many more resources you need to complete a building upgrade, or how many extra resources you will have after.</p>
+                    <p className="text-center">If you find this infinite galaxy resource calculator tool to be useful, please feel free to share it to your alliance! As more people use this tool, I will add more and more functionality!</p>
                     <div className="text-bold text-right mtauto"><a href="#" onClick={launchModal}><FontAwesomeIcon icon={faInfoCircle} /> How To Use</a></div>
                   </div>
                 </Card>
@@ -159,18 +163,11 @@ function App() {
             <Card>
               <h2 id="donation" style={{textAlign:'center', fontSize:'24px', color:'#00a500'}}>Help keep this site up and running!</h2>
               <p style={{marginBottom:'25px'}}></p>
-              <center>
-                <form action="https://www.paypal.com/donate" method="post" target="_blank">
-                  <input type="hidden" name="business" value="8PABYURJXY3VA" />
-                  <input type="hidden" name="no_recurring" value="0" />
-                  <input type="hidden" name="item_name" value="Thank You! You are helping to keep this site up and running!" />
-                  <input type="hidden" name="currency_code" value="USD" />
-                  <input type="image" src="https://pics.paypal.com/00/s/YzA5MjliNzAtNmE3MS00YzgzLWFjYzQtOTZjNzdhZTc1YTEx/file.PNG" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                  <img alt="PayPal Donate" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-                </form>
-              </center>
+              <div className="addthis_bottom_donate">
+                <div className="addthis_tipjar_inline"></div>
+              </div>
               <p></p>
-              <p>The Infinite Galaxy Resource calculator is a <strong className="text-600">free tool</strong> created and managed by just one person. It can be a bit of work to manage and keep up to date. The cost of keeping this Free Infinite Galaxy Tool online can also get pretty expensive for me on an annual basis. You are not obligated to donate, but any little bit helps!</p>
+              <p>The infinite galaxy resource calculator is a <strong className="text-600">free tool</strong> created and managed by just one person. It can be a bit of work to manage and keep up to date. The cost of keeping this Free Infinite Galaxy Tool online can also get pretty expensive for me on an annual basis. You are not obligated to donate, but any little bit helps!</p>
               <p>If just a few of the users donate, I can keep this tool online and continue adding functionality. I really hope to expand this tool and include many more features. Such as <strong className="text-600">the ability to save your data, add multiple farms, language translations, and much more.</strong> So if you are feeling generous, and want to help a poor developer who loves to play Infinite Galaxy, please feel free to donate below! Any amount helps! Just think of it like buying a pack from the shop in-game ;)</p>
             </Card>
           </Col>

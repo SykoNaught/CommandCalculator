@@ -63,6 +63,9 @@ const CommandTable = (props) => {
                         </tfoot>
                 }
             </table>
+            <div className="addthis_top_donate">
+                <div className="addthis_tipjar_inline"></div>
+            </div>
         </div>
     )
 }
