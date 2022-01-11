@@ -6,6 +6,7 @@ import reqData from './Data/BuildingRequirements.json';
 import RssBlock from './Components/RssBlock/RssBlock';
 import DropdownSelect from './Components/UI//DropdownSelect';
 import BuildingTable from './Components/BuildingBlock/BuildingTable';
+import UploadPreview from './Components/UploadPreview/UploadPreview';
 import Modal from './Components/UI/MyModal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
@@ -145,6 +146,9 @@ function App() {
                     selectedBuilding={selectedBuilding} />
                 </Card>
               </Col>
+            </Row>
+            <Row>
+              <UploadPreview />
             </Row>
             <Row>
               {

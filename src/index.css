@@ -126,3 +126,11 @@ h3{
   font-weight: 600;
   padding: 4px;
 }
+
+.modal-btn{
+  background-color:transparent;
+  border:0px;
+  color: #6c757d;
+  transition: all 0.25s ease;
+  font-weight:bold;
+}
