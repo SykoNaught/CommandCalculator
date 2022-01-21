@@ -87,10 +87,10 @@ h3{
   margin-bottom:0px !important;
 }
 .addthis_toolbox{
-  max-width:108px;
+  max-width:145px;
   margin:0 auto;
 }
-.at-tjin-element .addthis_toolbox a:nth-child(3){
+.at-tjin-element .addthis_toolbox a:nth-child(4){
   margin-right:0px !important;
   margin:0px !important;
 }
@@ -132,5 +132,96 @@ h3{
   border:0px;
   color: #6c757d;
   transition: all 0.25s ease;
-  font-weight:bold;
+  font-weight:600;
+}
+
+.light-gray-box{
+  text-align: center;
+  display: block;
+  padding: 20px;
+  border: 1px solid rgba(0,0,0,.2);
+  background-color: #f0f0f0;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #6c757d;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 26%);
+}
+
+.total-title{
+  padding-bottom:5px;
+  margin-bottom:5px;
+  text-align:center;
+  color: #6c757d;
+}
+
+.port-total th{
+  font-weight:600;
+  border-bottom:1px solid rgba(0,0,0,.2)
+}
+
+.nav-tabs{
+  border-bottom: 0px;
+  max-width: 100%;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  width:calc(100% - 83.25px);
+  overflow: hidden;
+  overflow-x: auto;
+  
+}
+.nav-tabs .nav-link {
+  border:0px;
+  margin-bottom:-2px;
+  margin-left:1px;
+  color: #6c757d;
+  font-weight: 600;
+  background-color: #fff;
+  border-color:#c0c0c0;
+  border-top: 3px solid #cecece;
+  min-width:82.25px;
+  text-align:center;
+}
+.nav-tabs .nav-item{scroll-snap-align:end;}
+.nav-tabs .nav-link:focus{
+  border-top:3px solid #cecece;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus{
+  background-color: #f0f0f0;
+  color:#495057;
+  isolation: unset;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  border-top:3px solid #6c757d;
+  isolation: isolate;
+}
+.nav-tabs .add-tab{
+  position:absolute;
+  right:1px;
+  background-color: #6c757d;
+  color: white;
+}
+.nav-tabs .add-tab:hover,.nav-tabs .add-tab:focus{
+  color: #6c757d;
+}
+
+.nav-tabs .total-tab:hover{
+  color: #6c757d;
+}
+
+.simplebar-content{
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-scroll-snap-type: x mandatory;-ms-scroll-snap-type: x mandatory;scroll-snap-type: x mandatory;
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar{
+  top: 4px !important;
+}
+
+.removePort{
+  padding: 10px;
+  width: 100%;
+  max-width: 450px;
+  border: 1px dashed rgba(0,0,0,.2);
 }

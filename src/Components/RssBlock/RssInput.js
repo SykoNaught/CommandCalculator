@@ -11,7 +11,7 @@ const RssInput = (props) => {
                 <FormControl
                     type="number"
                     id={props.id}
-                    name={props.id}
+                    name={props.name}
                     size="sm"
                     min="0"
                     step="1"

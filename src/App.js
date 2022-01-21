@@ -1,5 +1,5 @@
 import {React, useState} from 'react';
-import {Container, Row, Col} from 'react-bootstrap';
+import {Container, Row, Col, Tab, Nav} from 'react-bootstrap';
 import Card from './Components/UI/Card';
 import boxData from './Data/Boxes.json';
 import reqData from './Data/BuildingRequirements.json';
@@ -8,16 +8,30 @@ import DropdownSelect from './Components/UI//DropdownSelect';
 import BuildingTable from './Components/BuildingBlock/BuildingTable';
 import UploadPreview from './Components/UploadPreview/UploadPreview';
 import Modal from './Components/UI/MyModal';
+import PortTotal from './Components/PortTotals/PortTotal';
+import FinalTotal from './Components/PortTotals/FinalTotal';
+import SimpleBar from 'simplebar-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import 'simplebar/dist/simplebar.min.css';
 
 function App() {
   const [modalShow, setModalShow] = useState(false);
+  const [currentTab, setCurrentTab] = useState(0);
   const [totalRssByType, setTotalRssByType] = useState({
     "Titanium": 0,
     "Deuterium": 0,
     "Nickel": 0,
     "Plasma": 0
+  })
+  const [totalPortRssByType, setTotalPortRssByType] = useState({
+    Main:{
+    "id": 1,
+    "Name": 'Main',
+    "Titanium": 0,
+    "Deuterium": 0,
+    "Nickel": 0,
+    "Plasma": 0}
   })
   const [selectedBuilding, setSelectedBuilding] = useState({
     "Name": 'Command Center',
@@ -33,6 +47,13 @@ function App() {
     {"Deuterium": 0},
     {"Nickel": 0},
     {"Plasma": 0}
+  ])
+  const [portTabs, setPortTabs] = useState([
+    {
+      id: 1,
+      name: 'Main',
+      position: 1
+    },
   ])
   const handleBuildingSelect=(key, e)=>{
     const building = reqData[e.target.dataset.index]
@@ -84,23 +105,93 @@ function App() {
     setCalculatedRequirements(newValues)
   }
   
-  const setRssTypeTotal = (n, v) => {
-    const newValues = {
-        ...totalRssByType,
-        [n]: v
-    } 
-    setTotalRssByType(newValues)
-    calcRequirements(selectedBuilding, newValues)
+  const setRssTypeTotal = (p,n, v) => {
+      let newPortValues = {...totalPortRssByType, [p]: {...totalPortRssByType[p]}} 
+      newPortValues = {
+        ...totalPortRssByType,
+        [p]:{
+          ...newPortValues[p],
+          Name: p,
+          [n]: v
+        }
+      } 
+    setTotalPortRssByType(newPortValues)
+    calcTotalValues(newPortValues)
   }
+
+  const calcTotalValues = (newPortValues) => {
+    let newTotalValues = {
+      "Titanium": 0,
+      "Deuterium": 0,
+      "Nickel": 0,
+      "Plasma": 0
+    }
+    for(var key in newPortValues) {
+      if (newPortValues.hasOwnProperty(key)) {
+        newTotalValues['Titanium'] = formatAddCommas(formatRemoveCommas(newTotalValues['Titanium']) + formatRemoveCommas(newPortValues[key]['Titanium']))
+        newTotalValues['Deuterium'] = formatAddCommas(formatRemoveCommas(newTotalValues['Deuterium']) + formatRemoveCommas(newPortValues[key]['Deuterium']))
+        newTotalValues['Nickel'] = formatAddCommas(formatRemoveCommas(newTotalValues['Nickel']) + formatRemoveCommas(newPortValues[key]['Nickel']))
+        newTotalValues['Plasma'] = formatAddCommas(formatRemoveCommas(newTotalValues['Plasma']) + formatRemoveCommas(newPortValues[key]['Plasma']))
+      }
+    }
+    setTotalRssByType(newTotalValues)
+    calcRequirements(selectedBuilding, newTotalValues)
+  }
+  
   const formatAddCommas = (s) => {
     return s.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
   }
   const formatRemoveCommas = s => {
-    return parseInt(s.toString().replace(/[^0-9]/g, ''))
+    return parseInt(+s.toString().replace(/,/g, ''))
   }
   const launchModal = e => {
     e.preventDefault()
     setModalShow(true)
+  }
+  const addTab = key => {
+    if (key === "add"){
+      const lastTab = portTabs[Object.keys(portTabs)[Object.keys(portTabs).length - 1]]
+      const position = lastTab.position + 1
+      const portName = 'Port ' + position
+      console.log(position)
+      console.log(portTabs)
+      const portId = Date.now()
+      setPortTabs([
+        ...portTabs,
+        {
+          id: portId,
+          name: portName,
+          position: position
+        },
+      ])
+
+      let newPortVals = {
+        ...totalPortRssByType,
+        [portName]:{
+          "id": portId,
+          "Name": portName,
+          "Titanium": 0,
+          "Deuterium": 0,
+          "Nickel": 0,
+          "Plasma": 0}
+      } 
+      setTotalPortRssByType(newPortVals)
+      setCurrentTab(portTabs.length)
+
+      return
+    }
+    setCurrentTab(key)
+  }
+  const removeTab = (id, n) => {
+    const activeTab = currentTab -1
+    const filteredTabs = portTabs.filter((tab) => tab.id !== id);
+    const ports = totalPortRssByType
+    const { [n]: removedProperty, ...portsRest } = ports;
+    
+    setPortTabs(filteredTabs)
+    setTotalPortRssByType(portsRest)
+    calcTotalValues(portsRest)
+    setCurrentTab(activeTab)
   }
   return (
     <div className="App">
@@ -133,7 +224,7 @@ function App() {
                     </Row>
                     <p className="text-center" style={{marginTop:'auto'}}>This is an <strong className="text-600">Infinite Galaxy calculator</strong> tool that totals all of the resources in your depot. Then, compares your total resources to the required resources for a selected building and level. You can then see how many more resources you need to complete a building upgrade, or how many extra resources you will have after.</p>
                     <p className="text-center">If you find this infinite galaxy resource calculator tool to be useful, please feel free to share it to your alliance! As more people use this tool, I will add more and more functionality!</p>
-                    <div className="text-bold text-right mtauto"><a href="#" onClick={launchModal}><FontAwesomeIcon icon={faInfoCircle} /> How To Use</a></div>
+                    <div className="text-bold text-right mtauto"><button className="modal-btn" onClick={launchModal}><FontAwesomeIcon icon={faInfoCircle} /> How To Use</button></div>
                   </div>
                 </Card>
               </Col>
@@ -147,19 +238,70 @@ function App() {
                 </Card>
               </Col>
             </Row>
-            <Row>
-              <UploadPreview />
-            </Row>
-            <Row>
-              {
-                boxData.map( (box) => {
-                  const char = box.name.charAt(0).toLowerCase();
-                  return(
-                    <RssBlock key={box.name} rss={box} char={char} setTotal={setRssTypeTotal} />
-                  )
-                })
-              }
-            </Row>
+            <div style={{position:'relative'}}>
+              <Tab.Container defaultActiveKey="0" id="port-tabs" onSelect={addTab} activeKey={currentTab}>
+                <Nav variant="tabs">
+                  <SimpleBar style={{width:'100%', display:'flex', flexWrap:'nowrap', overflowX:'auto'}}>
+                    {
+                      portTabs.map( (port, i) => {
+                        return(
+                          <Nav.Item key={port.id + '-1'} >
+                            <Nav.Link eventKey={i}>{port.name}</Nav.Link>
+                          </Nav.Item>
+                        )
+                      })
+                    }
+                    <Nav.Item>
+                      <Nav.Link key="totals" eventKey="totals" title="Totals" className="total-tab">Totals</Nav.Link>
+                    </Nav.Item>
+                  </SimpleBar>
+                  <Nav.Item>
+                    <Nav.Link title="New +" key="add" eventKey="add" className="add-tab">New +</Nav.Link>
+                  </Nav.Item>
+                </Nav>
+                <Tab.Content>
+                  {
+                    portTabs.map( (port, i) => {
+                      return(
+                        <Tab.Pane key={port.id} eventKey={i} title={port.name}>
+                          <Row>
+                            <UploadPreview removePort={removeTab} portId={port.id} portName={port.name}/>
+                          </Row>
+                          <Row>
+                            {
+                              boxData.map( (box) => {
+                                const char = box.name.charAt(0).toLowerCase();
+                                return(
+                                  <RssBlock key={box.name} rss={box} char={char} setTotal={setRssTypeTotal} port={port.name} />
+                                )
+                              })
+                            }
+                          </Row>
+                        </Tab.Pane>
+                      )
+                    })
+                  }
+                  <Tab.Pane key="totals" eventKey="totals" title="Totals">
+                    <div className="section">
+                      <div className="light-gray-box">
+                        <h3 className="text-center">Totals by Port</h3>
+                      </div>
+                      <p></p>
+                      <Row>
+                        {
+                          Object.keys(totalPortRssByType).map((port) => {
+                            return(
+                                <PortTotal key={port} name={port} rss={totalPortRssByType} />
+                            )
+                          })
+                        }
+                        <FinalTotal key={'Total'} name={'Total Resources'} rss={totalRssByType} />  
+                      </Row>
+                    </div>
+                  </Tab.Pane>
+                </Tab.Content>
+              </Tab.Container>
+            </div>
           </Col>
         </Row>
         <Row>
@@ -189,6 +331,8 @@ function App() {
           </div>
         </Modal>
       </Container> 
+
+      <div className="powr-form-builder" id="sharethis-form-builder-61de101de0cd68001298522b"></div>
     </div>
   );
 }

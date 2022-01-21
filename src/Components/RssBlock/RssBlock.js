@@ -19,7 +19,6 @@ const RssBlock = (props) => {
             [name]: value
         } 
         setRssValues(newValues)
-        
         calc_total(newValues)
         
     }
@@ -41,14 +40,13 @@ const RssBlock = (props) => {
             }else{
                 multiplier = parseInt(newValues[item])
             }
-
             var boxTotal = boxAmount * multiplier
             
             total += boxTotal;
         };
         const formattedTotal = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         setTotalRss(formattedTotal)
-        props.setTotal(props.rss.name,formattedTotal)
+        props.setTotal(props.port,props.rss.name,formattedTotal)
     } 
     const imgPath = '/images/' + props.rss.name + '-Boxes.png'
     return(
@@ -76,7 +74,7 @@ const RssBlock = (props) => {
                         
                     const rowId = props.char + '-' + amount.replace(/,/g, '')
                         return(
-                            <RssInput key={rowId} id={rowId} amount={amount} updateTotal={changeHandler} /> 
+                            <RssInput key={rowId} id={rowId} name={amount.replace(/,/g, '')} amount={amount} updateTotal={changeHandler} /> 
                         )
                     })}
                 
