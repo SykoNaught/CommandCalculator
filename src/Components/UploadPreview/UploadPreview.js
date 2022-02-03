@@ -1,7 +1,7 @@
 import {React, useState} from 'react';
 import classes from './UploadPreview.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faQuestionCircle, faWindowClose, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faQuestionCircle, faWindowClose, faTrashAlt, faImages } from '@fortawesome/free-solid-svg-icons';
 import Modal from '../UI/MyModal';
 import {Row, Col} from 'react-bootstrap';
 
@@ -18,7 +18,6 @@ const UploadPreview = (props) => {
 
     images.push(...imgs);
     setImgs(images);
-    console.log(imgs);
   };
   const removeImage = (imgRef) => {
     const newImages = imgs.filter((img) => img !== imgRef);
@@ -44,10 +43,10 @@ const UploadPreview = (props) => {
         {props.portId === 1 ? 
         <>        
           <p>  
-            <button className="modal-btn" onClick={launchModal}>Upload Screenshots of your Depot <FontAwesomeIcon icon={faQuestionCircle} /></button>
+            <button className="modal-btn  upload-info-btn" onClick={launchModal}>Upload Screenshots of your Depot <FontAwesomeIcon icon={faQuestionCircle} /></button>
           </p>
-          <label className={`${classes.btn} ${classes.uploadBtn}`}>
-            <span>Upload&nbsp;</span> <FontAwesomeIcon icon={faPlus} style={{color:"#6c757d"}} />
+          <label className={`${classes.btn} ${classes.uploadBtn} upload-img-btn`}>
+            <span>Upload&nbsp;</span> <FontAwesomeIcon icon={faImages} style={{color:"#6c757d"}} />
             <input type="file" hidden multiple onChange={addImages} accept="image/*" />
           </label>
         </>
@@ -55,20 +54,20 @@ const UploadPreview = (props) => {
          <Row>
            <Col className="d-md-none" style={{marginBottom:"15px"}}>
             <p><button className="modal-btn" onClick={launchDeleteModal}>Delete Spaceport and Resources <FontAwesomeIcon icon={faQuestionCircle} /></button></p>
-            <button className="modal-btn removePort" onClick={handleRemove}><span>Remove {props.portName}&nbsp;</span> <FontAwesomeIcon style={{marginTop: "4px"}} icon={faTrashAlt} /></button>
+            <button className="modal-btn removePort remove-port-btn" onClick={handleRemove}><span>Remove {props.portName}&nbsp;</span> <FontAwesomeIcon style={{marginTop: "4px"}} icon={faTrashAlt} /></button>
            </Col>
            <Col lg={6} md={6} className={`${classes.dashedDivider}`}>
             <p>  
-              <button className="modal-btn" onClick={launchModal}>Upload Screenshots of your Depot <FontAwesomeIcon icon={faQuestionCircle} /></button>
+              <button className="modal-btn upload-info-modal" onClick={launchModal}>Upload Screenshots of your Depot <FontAwesomeIcon icon={faQuestionCircle} /></button>
             </p>
-            <label className={`${classes.btn} ${classes.uploadBtn}`}>
-              <span>Upload&nbsp;</span> <FontAwesomeIcon icon={faPlus} style={{color:"#6c757d"}} />
+            <label className={`${classes.btn} ${classes.uploadBtn} upload-img-btn`}>
+              <span>Upload&nbsp;</span> <FontAwesomeIcon icon={faImages} style={{color:"#6c757d"}} />
               <input type="file" hidden multiple onChange={addImages} accept="image/*" />
             </label>
            </Col>
            <Col lg={6} md={6} className="d-none d-sm-none d-md-block" style={{alignSelf:"flex-end"}}>
-            <p><button className="modal-btn" onClick={launchDeleteModal}>Delete Spaceport and Resources <FontAwesomeIcon icon={faQuestionCircle} /></button></p>
-            <button className="modal-btn removePort" onClick={handleRemove}><span>Remove {props.portName}&nbsp;</span> <FontAwesomeIcon style={{marginTop: "4px"}} icon={faTrashAlt} /></button>
+            <p><button className="modal-btn delete-info-btn" onClick={launchDeleteModal}>Delete Spaceport and Resources <FontAwesomeIcon icon={faQuestionCircle} /></button></p>
+            <button className="modal-btn removePort remove-port-btn" onClick={handleRemove}><span>Remove {props.portName}&nbsp;</span> <FontAwesomeIcon style={{marginTop: "4px"}} icon={faTrashAlt} /></button>
            </Col>
          </Row>
           

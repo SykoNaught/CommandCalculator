@@ -153,8 +153,6 @@ function App() {
       const lastTab = portTabs[Object.keys(portTabs)[Object.keys(portTabs).length - 1]]
       const position = lastTab.position + 1
       const portName = 'Port ' + position
-      console.log(position)
-      console.log(portTabs)
       const portId = Date.now()
       setPortTabs([
         ...portTabs,
@@ -252,11 +250,11 @@ function App() {
                       })
                     }
                     <Nav.Item>
-                      <Nav.Link key="totals" eventKey="totals" title="Totals" className="total-tab">Totals</Nav.Link>
+                      <Nav.Link key="totals" eventKey="totals" title="Totals" className="total-tab total-rss-btn">Totals</Nav.Link>
                     </Nav.Item>
                   </SimpleBar>
                   <Nav.Item>
-                    <Nav.Link title="New +" key="add" eventKey="add" className="add-tab">New +</Nav.Link>
+                    <Nav.Link title="New +" key="add" eventKey="add" className="add-tab add-port-btn">New +</Nav.Link>
                   </Nav.Item>
                 </Nav>
                 <Tab.Content>
